@@ -13,10 +13,10 @@ export function AudioPage() {
   const [cursorPos, setCursorPos] = useState(0);
   const [isLooping, setIsLoop] = useState(false);
 
-  /// Interval hook to move the cursor
+  /// Interval hook to manage audio player status
   const { start, stop, isActive } = useInterval(
     () => {
-      setIsPlaying(true); // Set;
+      setIsPlaying(true);
       setTrackTime(currTrackTime + 0.1);
       setCursorPos((cursorPos) => cursorPos + 5.882352941176471 / 10);
 
@@ -33,15 +33,6 @@ export function AudioPage() {
     100,
     { autoStart: false }
   );
-
-  // Interval Manipulations
-  const moveCursor = () => {
-    start();
-  };
-
-  const stopCursor = () => {
-    stop();
-  };
 
   //Adding new audio to the list
   const addNewRecord = (src) => {
@@ -76,11 +67,9 @@ export function AudioPage() {
     if (isActive()) {
       stop();
       setIsPlaying(false);
-      console.log('Stopping all Audios!!');
     } else {
       start();
       setIsPlaying(true);
-      console.log('starting all Audios!!');
     }
   };
 
@@ -111,9 +100,6 @@ export function AudioPage() {
       <MainHeader />
       <div className="container fade-in1">
         <AudioList
-          currTrackTime={currTrackTime}
-          moveCursor={moveCursor}
-          stopCursor={stopCursor}
           setMuted={setMuted}
           audios={audios}
           isPlaying={isPlaying}
@@ -128,7 +114,6 @@ export function AudioPage() {
           togglePlay={togglePlay}
           isPlaying={isPlaying}
           isLooping={isLooping}
-          addNewRecord={addNewRecord}
         />
       </div>
     </>

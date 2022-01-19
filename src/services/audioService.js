@@ -71,43 +71,9 @@ function _loadAudios() {
   return audios;
 }
 
-const data = {
-  timeLine: [
-    {
-      name: 'tambourine',
-      startTime: 0,
-      length: 5,
-      channel: 1,
-    },
-  ],
-};
-let audio = new Audio('./audios/B VOC.mp3');
-let trackLength = 100; // each number represnts second / 10
-let currTrackTime = 0;
-
-const startTime = {
-  row1: 1,
-  row2: 0,
-  row3: 0,
-  row4: 0,
-  row5: 0,
-  row6: 0,
-  row7: 0,
-  row8: 0,
-};
-
-// Loop
-let intr = setInterval(() => {
-  currTrackTime++;
-
-  // if (currTrackTime > startTime.row1) row1Audio.play();
-  if (currTrackTime === trackLength) clearInterval(intr);
-}, 100);
-
 async function query() {
   try {
     const audios = gAudios;
-    console.log(audios);
     return Promise.resolve(audios);
   } catch (err) {
     console.log(err);
@@ -145,6 +111,4 @@ async function save(audio) {
   } catch (err) {
     console.log(err);
   }
-  // const savedAudio = audio._id ? updateAudio(audio) : addAudio(audio)
-  // return savedAudio
 }

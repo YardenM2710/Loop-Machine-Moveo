@@ -5,10 +5,6 @@ import { Ruler } from './Ruler';
 
 export function AudioList({
   audios,
-  onSelectAudio,
-  removeAudio,
-  moveCursor,
-  stopCursor,
   setMuted,
   isPlaying,
   cursorPos,
@@ -59,10 +55,6 @@ export function AudioList({
       {audios.map((audio, idx) => (
         <AudioPreview
           setMuted={setMuted}
-          stopCursor={stopCursor}
-          moveCursor={moveCursor}
-          removeAudio={removeAudio}
-          onSelectAudio={onSelectAudio}
           audio={audio}
           key={audio._id}
           isPlaying={isPlaying}

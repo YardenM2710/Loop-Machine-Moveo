@@ -1,6 +1,5 @@
 import PlayCircle from '@mui/icons-material/PlayCircle';
 import Stop from '@mui/icons-material/Stop';
-import Mic from '@mui/icons-material/Mic';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Pause from '@mui/icons-material/Pause';

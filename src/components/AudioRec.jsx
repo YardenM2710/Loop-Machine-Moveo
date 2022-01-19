@@ -29,12 +29,13 @@ export function AudioRec({ addNewRecord }) {
 
   return (
     <div className="channel">
-      <div className={`audio-preview ${isRecording ? 'prevRecOn' : 'prevRec'}`}>
+      <div
+        onClick={toggleRecording}
+        className={`audio-preview ${isRecording ? 'prevRecOn' : 'prevRec'}`}
+      >
         <p>Record your self!(Only if you're a good singer)</p>
 
-        <Button value="record" onClick={toggleRecording}>
-          {isRecording ? <Pause /> : <MicIcon />}
-        </Button>
+        <Button value="record">{isRecording ? <Pause /> : <MicIcon />}</Button>
       </div>
     </div>
   );
