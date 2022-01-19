@@ -13,14 +13,39 @@ export function AudioActions({
   setIsLooping,
   isLooping,
   isPlaying,
+  addNewRecord,
 }) {
   const toggleBtn = () => {
     togglePlay();
   };
+  // const [isRecording, setIsRecording] = useState(false);
+  // const onStop = (url) => {
+  //   console.log('hello', url);
+  //   addNewRecord(url);
+  // };
+  // const { status, startRecording, stopRecording, mediaBlobUrl } =
+  //   useReactMediaRecorder({ video: false, audio: true, onStop });
+  // const toggleBtn = () => {
+  //   togglePlay();
+  // };
 
+  // const toggleRecording = () => {
+  //   if (isRecording) {
+  //     stopRecording();
+  //     setIsRecording(false);
+  //   } else {
+  //     startRecording();
+  //     setIsRecording(true);
+  //   }
+  //   console.log('Recordin!', isRecording);
+  // };
   return (
     <div className="audio-actions">
       <ToggleButtonGroup aria-label="device">
+        {/* <ToggleButton value="record" onClick={toggleRecording}>
+          {!isRecording ? 'Record yourself' : 'Recoding'}
+        </ToggleButton> */}
+
         <ToggleButton
           style={{
             backgroundColor: isPlaying

@@ -14,51 +14,51 @@ const gDefaultAudios = [
   {
     _id: utilService.makeId(),
     title: 'Tambourine',
-    src: './audios/_tambourine_shake_higher.mp3',
-    color: '#55efc4',
+    src: './audios/tambourine.mp3',
+    color: utilService.getRGBARandomColor(),
   },
   {
     _id: utilService.makeId(),
     title: 'UUHO vocal',
     src: './audios/UUHO VOC.mp3',
-    color: '#81ecec',
+    color: utilService.getRGBARandomColor(),
   },
   {
     _id: utilService.makeId(),
     title: 'Lead vocal',
     src: './audios/LEAD 1.mp3',
-    color: '#2ed573',
+    color: utilService.getRGBARandomColor(),
   },
   {
     _id: utilService.makeId(),
     title: 'Lead vocal 2',
     src: './audios/B VOC.mp3',
-    color: '#00cec9',
+    color: utilService.getRGBARandomColor(),
   },
 
   {
     _id: utilService.makeId(),
     title: 'Bring in the drums',
     src: './audios/DRUMS.mp3',
-    color: '#2ecc71',
+    color: utilService.getRGBARandomColor(),
   },
   {
     _id: utilService.makeId(),
     title: 'Extra HE HE vocals',
     src: './audios/HE HE VOC.mp3',
-    color: '#ffeaa7',
+    color: utilService.getRGBARandomColor(),
   },
   {
     _id: utilService.makeId(),
     title: 'Very high vocal',
     src: './audios/HIGH VOC.mp3',
-    color: '#1abc9c',
+    color: utilService.getRGBARandomColor(),
   },
   {
     _id: utilService.makeId(),
     title: 'Some Jibrish for the rythm',
     src: './audios/JIBRISH.mp3',
-    color: '#7bed9f',
+    color: utilService.getRGBARandomColor(),
   },
 ];
 

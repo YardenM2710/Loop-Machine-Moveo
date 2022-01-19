@@ -4,11 +4,15 @@
     height: 14px;
     color: white;
     padding: 10px;
+    border-radius: 10px;
     padding-bottom: 40px;
+    margin-bottom: 10px;
+  // background-color: rgba(124, 123, 123, 0.137);
+  overflow: hidden;
     .cm,
     .mm {
     position: absolute;
-    border-left: 1px solid #555;
+    border-left: 1px solid rgba(182, 182, 182, 0.808);
     height: 14px;
     width: 10%;
 
@@ -133,10 +137,13 @@
   .cm:nth-of-type(18):after {
     content: "17";
    }
-   .cm:last-child{
-     width: 120px;
-   }
- 
+   
+   .cm:nth-of-type(17){
+    width: 10%;
+  }
+ .cm:last-child{
+   width: 0%;
+ }
 
     .mm:nth-of-type(1) {
     left: 5.88%;
@@ -236,9 +243,10 @@
     height:100%;
     z-index: 10;
     transition: all 0.3s;
-    width: 10px;
+    width: 5px;
     background-color:rgb(223, 253, 223);
     border-radius: 20px;
     cursor: pointer;
     user-select: none;
+    top: 0;
   }

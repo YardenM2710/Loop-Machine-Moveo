@@ -2,7 +2,13 @@ import { Button, ToggleButton } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import { VolumeMute, VolumeOff } from '@mui/icons-material';
 
-export function AudioPreview({ audio, currTrackTime, setMuted, isPlaying }) {
+export function AudioPreview({
+  audio,
+  currTrackTime,
+  setMuted,
+  isPlaying,
+  idx,
+}) {
   const [currAudio, setAudio] = useState(false);
 
   useEffect(() => {
@@ -25,8 +31,8 @@ export function AudioPreview({ audio, currTrackTime, setMuted, isPlaying }) {
 
   return (
     <div
-      style={{ backgroundColor: audio.color }}
-      className="audio-preview bounce-in-top"
+      // style={{ backgroundColor: audio.color }}
+      className={`audio-preview prev${idx + 1}`}
     >
       <p>{audio.title}</p>
       <Button

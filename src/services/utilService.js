@@ -4,6 +4,7 @@ export const utilService = {
   timeSince,
   debounce,
   getRandomColor,
+  getRGBARandomColor,
 };
 
 function makeId(length = 5) {
@@ -14,6 +15,14 @@ function makeId(length = 5) {
     txt += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return txt;
+}
+
+function getRGBARandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  const a = 0.6;
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
 function getRandomColor() {

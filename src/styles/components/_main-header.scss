@@ -1,10 +1,10 @@
 .app-header {
-    background: #56f08c;
+    background: #191414;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
- 
+    background-image: linear-gradient(to right, #000000,#000000b9,#000000b9,#0be8815b, #0be881be);
     box-shadow: 0px -3px 6px 0px;
 
     button{
@@ -50,6 +50,13 @@
     .invisible{ 
         display:none;
     }
-
+.hamburger{
+    // background-color:rgba(255, 255, 255, 0.212);
+    color: white;
+}
+.hamburger:hover{
+    background-color:rgba(255, 255, 255, 0.212);
+    // color: white;
+}
 }
 

@@ -5,6 +5,7 @@ import { AudioActions } from '../components/AudioActions';
 import { Ruler } from '../components/Ruler';
 import { useInterval } from 'react-interval-hook';
 import { MainHeader } from '../components/MainHeader';
+import { utilService } from '../services/utilService';
 export function AudioPage() {
   const [audios, setAudios] = useState(null);
   const [currTrackTime, setTrackTime] = useState(0);
@@ -34,6 +35,20 @@ export function AudioPage() {
     100,
     { autoStart: false }
   );
+  const addNewRecord = (src) => {
+    let newAudios = [
+      ...audios,
+      {
+        _id: utilService.makeId(),
+        title: 'User Recording',
+        src: src,
+      },
+    ];
+
+    setAudios(newAudios);
+  };
+
+  // Veyr smart function that
 
   // Interval Manipulations
   const moveCursor = () => {
@@ -98,9 +113,7 @@ export function AudioPage() {
   return (
     <>
       <MainHeader />
-      <div className="container">
-        <Ruler />
-
+      <div className="container fade-in1">
         <AudioList
           currTrackTime={currTrackTime}
           moveCursor={moveCursor}
@@ -110,6 +123,8 @@ export function AudioPage() {
           isPlaying={isPlaying}
           cursorPos={cursorPos}
           setCursorPos={setCursorPos}
+          setTrackTime={setTrackTime}
+          addNewRecord={addNewRecord}
         />
         <AudioActions
           setIsLooping={setIsLooping}
@@ -117,6 +132,7 @@ export function AudioPage() {
           togglePlay={togglePlay}
           isPlaying={isPlaying}
           isLooping={isLooping}
+          addNewRecord={addNewRecord}
         />
       </div>
     </>

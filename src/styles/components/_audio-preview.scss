@@ -1,6 +1,10 @@
 .audio-list{
     width: 100%;
     position: relative;
+    padding: 10px;
+    border-radius: 15px;
+  background-color: rgba(124, 123, 123, 0.137);
+
     .audio-preview{
         display: flex;
         align-items: center;
@@ -10,11 +14,26 @@
         padding: 20px;
         width:100%;
         margin-top: 20px;
-        background-color: rgba(248, 255, 250, 0.795);
+
         cursor: pointer;
         outline: rgba(255, 255, 255, 0)  1px solid;
         transition:0.3s;
         border-radius:10px;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.158);
+
+        button{
+                color: #404041;
+                transition:0.3s;
+        }
+        button:hover{
+                color: #0000ff38;
+                transform: scale(1.1);
+        }
+
         
     }
     .audio-preview:hover{
@@ -23,9 +42,11 @@
 
     }
     p{
-        color: rgb(22, 22, 22);
-        font-family: poppins;
-        font-size: 20px;
+        color: rgb(233, 233, 233);
+        font-family:"JetBrains Mono", monospace;
+        font-size: 18px;
+        opacity: 1!important;
+
     }
 }
 
@@ -137,5 +158,86 @@
       -webkit-animation-timing-function: ease-out;
               animation-timing-function: ease-out;
     }
-  }
-  
+
+}
+
+
+.prev1{
+        background: #74ebd5; 
+background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5); 
+background: linear-gradient(to right, #ACB6E5, #74ebd5); 
+
+    }
+    .prev2{
+        background: #CAC531;  
+        background: -webkit-linear-gradient(to right, #F3F9A7, #CAC531); 
+        background: linear-gradient(to right, #F3F9A7, #CAC531); 
+        
+    }
+    .prev3{
+        background: #a8ff78;  
+background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78); 
+background: linear-gradient(to right, #78ffd6, #a8ff78); 
+
+    }
+    .prev4{
+        background: #59C173;  
+        background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173); 
+        background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); 
+        
+    }
+    .prev5{
+        background: #ad5389;  
+        background: -webkit-linear-gradient(to right, #3c1053, #ad5389); 
+        background: linear-gradient(to right, #3c1053, #ad5389); 
+        
+    }
+    .prev6{
+        background: #a8c0ff;  
+background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff); 
+background: linear-gradient(to right, #3f2b96, #a8c0ff); 
+
+    }
+    .prev7{
+        background: #0f0c29;  
+        background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+        background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+        
+}
+.prev8{
+        background: #00b09b;  
+        background: -webkit-linear-gradient(to right, #96c93d, #00b09b); 
+        background: linear-gradient(to right, #96c93d, #00b09b); 
+        
+    }
+    .prev9{
+        background: #a8c0ff;  
+background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff); 
+background: linear-gradient(to right, #3f2b96, #a8c0ff); 
+
+    }
+    .prev10{
+        background: #0f0c29;  
+        background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+        background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+        
+}
+.prev11{
+        background: #00b09b;  
+        background: -webkit-linear-gradient(to right, #96c93d, #00b09b); 
+        background: linear-gradient(to right, #96c93d, #00b09b); 
+        
+    }
+
+    .prevRec{
+        background: #a5a5a557;  
+        
+        
+    }
+
+    .prevRecOn{
+        // background: #a5a5a5;  
+        -webkit-animation: color-change-2x 2s linear infinite alternate both;
+	        animation: color-change-2x 2s linear infinite alternate both;
+        
+    }

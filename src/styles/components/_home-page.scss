@@ -10,6 +10,8 @@
 
         .app-header{
             background-color: rgba(255, 255, 255, 0);
+            background-image: none;
+
         }
 
         .home-page-details{
@@ -76,7 +78,7 @@ $letter-colors: #485460, #05da76, #05da76, #485460 ,  #485460, #05da76, #05da76,
 }
 
 .letter {
-  animation: bounce $bounce-time / 2 $bounce-timing-function infinite alternate;
+  animation: bounce $bounce-time / 2 $bounce-timing-function  alternate;
   display: inline-block;
   transform: translate3d(0, 0, 0);
   margin-top: 0.5em;

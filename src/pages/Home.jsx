@@ -21,7 +21,7 @@ export function Home() {
             onClick={() => history.push('/audio')}
             className="nice-button"
           >
-            Lets have a 'Loop'
+            Let's have a Loop
           </button>
         </div>
       </div>

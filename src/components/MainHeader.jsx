@@ -26,12 +26,19 @@ export function MainHeader() {
   return (
     <header className="app-header">
       <div className="logo bounce">
-        {letters.map((letter) => (
-          <span className="letter">{letter}</span>
+        {letters.map((letter, idx) => (
+          <span key={idx} className="letter">
+            {letter}
+          </span>
         ))}
       </div>
 
-      <ToggleButton onClick={toggleNavBar} value="menu" aria-label="menu">
+      <ToggleButton
+        className="hamburger"
+        onClick={toggleNavBar}
+        value="menu"
+        aria-label="menu"
+      >
         <Menu />
       </ToggleButton>
 

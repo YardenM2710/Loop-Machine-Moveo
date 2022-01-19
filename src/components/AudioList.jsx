@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
 import { AudioPreview } from './AudioPreview';
+import { AudioRec } from './AudioRec';
+import { Ruler } from './Ruler';
 
 export function AudioList({
   audios,
@@ -14,6 +16,8 @@ export function AudioList({
   isPlaying,
   cursorPos,
   setCursorPos,
+  setTrackTime,
+  addNewRecord,
 }) {
   const [isDrag, setIsDrag] = useState(false);
   const ref = useRef(null);
@@ -34,11 +38,13 @@ export function AudioList({
       console.log('NODE: ,', ref);
 
       if (ev.nativeEvent.offsetX > 2) {
-        var eachPercent = (window.innerWidth - 40) / 100; //
-        let pos = ev.nativeEvent.offsetX / eachPercent;
-
+        var totalWidth = window.innerWidth - 40; //
+        var lengthPercent = totalWidth / 100;
+        let pos = ev.nativeEvent.offsetX / lengthPercent;
         if (Math.abs(cursorPos - pos) > 8) return;
         setCursorPos(pos);
+        // 17
+        setTrackTime(pos * (17 / 100));
       }
       return;
     }
@@ -55,7 +61,9 @@ export function AudioList({
         className="line-through"
         ref={ref}
       ></div>
-      {audios.map((audio) => (
+      <Ruler />
+
+      {audios.map((audio, idx) => (
         <AudioPreview
           currTrackTime={currTrackTime}
           setMuted={setMuted}
@@ -68,8 +76,10 @@ export function AudioList({
           audio={audio}
           key={audio._id}
           isPlaying={isPlaying}
+          idx={idx}
         />
       ))}
+      <AudioRec addNewRecord={addNewRecord}></AudioRec>
     </section>
   );
 }
