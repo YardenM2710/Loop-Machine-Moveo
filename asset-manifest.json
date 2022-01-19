@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Loop-Machine-Moveo/static/css/main.181fec29.css",
-    "main.js": "/Loop-Machine-Moveo/static/js/main.369acad8.js",
+    "main.css": "/Loop-Machine-Moveo/static/css/main.feb0e3b3.css",
+    "main.js": "/Loop-Machine-Moveo/static/js/main.69c9ca64.js",
     "static/js/787.d1179d19.chunk.js": "/Loop-Machine-Moveo/static/js/787.d1179d19.chunk.js",
     "index.html": "/Loop-Machine-Moveo/index.html",
-    "main.181fec29.css.map": "/Loop-Machine-Moveo/static/css/main.181fec29.css.map",
-    "main.369acad8.js.map": "/Loop-Machine-Moveo/static/js/main.369acad8.js.map",
+    "main.feb0e3b3.css.map": "/Loop-Machine-Moveo/static/css/main.feb0e3b3.css.map",
+    "main.69c9ca64.js.map": "/Loop-Machine-Moveo/static/js/main.69c9ca64.js.map",
     "787.d1179d19.chunk.js.map": "/Loop-Machine-Moveo/static/js/787.d1179d19.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.181fec29.css",
-    "static/js/main.369acad8.js"
+    "static/css/main.feb0e3b3.css",
+    "static/js/main.69c9ca64.js"
   ]
 }
