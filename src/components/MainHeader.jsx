@@ -49,12 +49,22 @@ export function MainHeader() {
 
       <nav className={isOpen ? 'nav-bar open' : 'nav-bar'}>
         <Link to="/">
-          <Button variant="text">
+          <Button
+            value="hpme"
+            aria-label="home"
+            style={{ textTransform: 'none' }}
+            variant="text"
+          >
             Home <Home />
           </Button>
         </Link>
         <Link to="/audio">
-          <Button variant="text">
+          <Button
+            value="loop"
+            aria-label="loop"
+            style={{ textTransform: 'none' }}
+            variant="text"
+          >
             Looper <Audiotrack />
           </Button>
         </Link>

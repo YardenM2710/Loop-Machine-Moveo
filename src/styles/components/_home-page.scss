@@ -35,11 +35,13 @@
           .home-page-details{
         
             p{
-              font-size: 20px;
-                width: 35ch;
+              font-size: 18px;
+                width: 30ch;
                 
             }
         }
+
+
         }
  
 }
@@ -62,7 +64,7 @@ $font-family: "Product Sans"; // preferably sans-serif
 $font-size: 6rem;
 $font-weight: bold;
 $font-style: normal;
-$letter-colors: #485460, #05da76, #05da76, #485460 ,  #485460, #05da76, #05da76, #05da76, #05da76, #05da76, #485460;
+$letter-colors: #485460, #0be881, #0be881, #485460 ,  #485460, #0be881, #0be881, #0be881,#0be881, #0be881, #485460;
 
 
 .bounce {
@@ -81,7 +83,6 @@ $letter-colors: #485460, #05da76, #05da76, #485460 ,  #485460, #05da76, #05da76,
   animation: bounce $bounce-time / 2 $bounce-timing-function  alternate;
   display: inline-block;
   transform: translate3d(0, 0, 0);
-  margin-top: 0.5em;
   text-shadow: rgba(#000, $shadow-opacity) 0 0 $shadow-scattering-initial;
   font: $font-style $font-weight $font-size $font-family, sans-serif;
   @for $i from 1 through length($letter-colors) {

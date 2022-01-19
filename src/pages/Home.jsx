@@ -13,8 +13,8 @@ export function Home() {
           <h1>Welcome to my Woop ti Loop App </h1>
           <p>
             Live looping is the recording and playback of a piece of music in
-            real-time[1] using either dedicated hardware devices, called loopers
-            or phrase samplers, or software running on a computer with an audio
+            real-time using either dedicated hardware devices, called loopers or
+            phrase samplers, or software running on a computer with an audio
             interface.
           </p>
           <button

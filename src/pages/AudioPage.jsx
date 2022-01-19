@@ -1,19 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { audioService } from '../services/audioService';
 import { AudioList } from '../components/AudioList';
 import { AudioActions } from '../components/AudioActions';
-import { Ruler } from '../components/Ruler';
 import { useInterval } from 'react-interval-hook';
 import { MainHeader } from '../components/MainHeader';
 import { utilService } from '../services/utilService';
+
 export function AudioPage() {
   const [audios, setAudios] = useState(null);
   const [currTrackTime, setTrackTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [cursorPos, setCursorPos] = useState(0);
   const [isLooping, setIsLoop] = useState(false);
-
-  const [interval, setTrackInterval] = useState(false);
 
   /// Interval hook to move the cursor
   const { start, stop, isActive } = useInterval(
@@ -35,20 +33,6 @@ export function AudioPage() {
     100,
     { autoStart: false }
   );
-  const addNewRecord = (src) => {
-    let newAudios = [
-      ...audios,
-      {
-        _id: utilService.makeId(),
-        title: 'User Recording',
-        src: src,
-      },
-    ];
-
-    setAudios(newAudios);
-  };
-
-  // Veyr smart function that
 
   // Interval Manipulations
   const moveCursor = () => {
@@ -57,6 +41,20 @@ export function AudioPage() {
 
   const stopCursor = () => {
     stop();
+  };
+
+  //Adding new audio to the list
+  const addNewRecord = (src) => {
+    let newAudios = [
+      ...audios,
+      {
+        _id: utilService.makeId(),
+        title: 'Your audio here',
+        src: src,
+      },
+    ];
+
+    setAudios(newAudios);
   };
 
   //----------------------------Audio Load section-----------------------------------------
@@ -88,7 +86,6 @@ export function AudioPage() {
 
   const onStopPlaying = () => {
     stop();
-    console.log('STOP!!');
     setCursorPos(0);
     setTrackTime(0);
     setIsPlaying(false);
@@ -98,7 +95,6 @@ export function AudioPage() {
     let newAudios = audios.map((audio) => {
       if (id === audio._id) {
         audio.isMuted = !audio.isMuted;
-        console.log('Set muted id:', id, ' to ', audio.isMuted);
       }
       return audio;
     });
