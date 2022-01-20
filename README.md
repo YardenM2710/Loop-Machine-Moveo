@@ -1,7 +1,9 @@
 # Moveo Loop Machine Application
 ## Description
 * Loop Machine is an Audio loop Application that makes you wanna dance!
-This application is very easy to use, You got 8 channels, each channel representing a piece of audio.
+
+
+* This application is very easy to use, You got 8 channels, each channel representing a piece of audio.
 
 * on each channel, you got a mute button that gives you the option to add each audio gradually.
 At the bottom of the page, you got 3 buttons, Play/Pause, Stop, and Loop. The play button starts to play 
