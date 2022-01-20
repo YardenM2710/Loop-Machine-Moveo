@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -8,6 +7,7 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
   const mediaRecorder = new MediaRecorder(stream);
   mediaRecorder.start();
 });
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

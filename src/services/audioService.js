@@ -10,6 +10,8 @@ export const audioService = {
   save,
 };
 
+var gAudios = _loadAudios();
+
 const gDefaultAudios = [
   {
     _id: utilService.makeId(),
@@ -61,8 +63,6 @@ const gDefaultAudios = [
     color: utilService.getRGBARandomColor(),
   },
 ];
-
-var gAudios = _loadAudios();
 
 function _loadAudios() {
   let audios = storageService.query(KEY);

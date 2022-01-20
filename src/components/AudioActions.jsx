@@ -26,8 +26,8 @@ export function AudioActions({
               : 'rgb(255 255 255 / 0)',
           }}
           onClick={toggleBtn}
-          value="laptop"
-          aria-label="laptop"
+          value="play"
+          aria-label="play"
         >
           {isPlaying ? <Pause /> : <PlayCircle />}
         </ToggleButton>
@@ -41,8 +41,8 @@ export function AudioActions({
               : 'rgb(255 255 255 / 0)',
           }}
           onClick={setIsLooping}
-          value="phone"
-          aria-label="phone"
+          value="loop"
+          aria-label="loop"
         >
           <Loop />
         </ToggleButton>

@@ -13,6 +13,20 @@ export function AudioPage() {
   const [cursorPos, setCursorPos] = useState(0);
   const [isLooping, setIsLoop] = useState(false);
 
+  //----------------------------Audio Load section-----------------------------------------
+  useEffect(() => {
+    loadAudios();
+  }, []);
+
+  async function loadAudios() {
+    try {
+      const audios = await audioService.query();
+      setAudios(audios);
+    } catch (err) {
+      console.log('Couldnt load audios', err);
+    }
+  }
+
   /// Interval hook to manage audio player status
   const { start, stop, isActive } = useInterval(
     () => {
@@ -47,20 +61,6 @@ export function AudioPage() {
 
     setAudios(newAudios);
   };
-
-  //----------------------------Audio Load section-----------------------------------------
-  useEffect(() => {
-    loadAudios();
-  }, []);
-
-  async function loadAudios() {
-    try {
-      const audios = await audioService.query();
-      setAudios(audios);
-    } catch (err) {
-      console.log('Couldnt load audios', err);
-    }
-  }
 
   //--------------------------Audio Play section-------------------------------------------
   const togglePlay = () => {

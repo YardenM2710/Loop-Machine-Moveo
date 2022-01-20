@@ -7,10 +7,12 @@ import MicIcon from '@mui/icons-material/Mic';
 export function AudioRec({ addNewRecord }) {
   const [isRecording, setIsRecording] = useState(false);
 
+  ///sends the url
   const onStop = (url) => {
     addNewRecord(url);
   };
 
+  //Recorder hook
   const { startRecording, stopRecording } = useReactMediaRecorder({
     video: false,
     audio: true,

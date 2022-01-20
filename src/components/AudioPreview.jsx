@@ -33,8 +33,8 @@ export function AudioPreview({ audio, setMuted, isPlaying, idx }) {
         <Button
           onClick={togglePlay}
           variant="primary"
-          value="laptop"
-          aria-label="laptop"
+          value="volume"
+          aria-label="volume"
         >
           {!audio.isMuted ? <VolumeMute /> : <VolumeOff />}
         </Button>

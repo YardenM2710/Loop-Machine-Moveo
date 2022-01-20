@@ -18,11 +18,13 @@ export function MainHeader() {
     'N',
     'E',
   ]);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavBar = () => {
     setIsOpen((isOpen) => !isOpen);
   };
+
   return (
     <header className="app-header">
       <div className="logo bounce">
