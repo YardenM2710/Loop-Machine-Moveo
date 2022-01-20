@@ -10,8 +10,6 @@ export const audioService = {
   save,
 };
 
-var gAudios = _loadAudios();
-
 const gDefaultAudios = [
   {
     _id: utilService.makeId(),
@@ -64,6 +62,8 @@ const gDefaultAudios = [
   },
 ];
 
+var gAudios = _loadAudios();
+
 function _loadAudios() {
   let audios = storageService.query(KEY);
   if (!audios || !audios.length) audios = gDefaultAudios;
@@ -74,6 +74,7 @@ function _loadAudios() {
 async function query() {
   try {
     const audios = gAudios;
+    console.log(audios);
     return Promise.resolve(audios);
   } catch (err) {
     console.log(err);
@@ -111,4 +112,6 @@ async function save(audio) {
   } catch (err) {
     console.log(err);
   }
+  // const savedAudio = audio._id ? updateAudio(audio) : addAudio(audio)
+  // return savedAudio
 }
