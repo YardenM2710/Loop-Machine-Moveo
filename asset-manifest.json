@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Loop-Machine-Moveo/static/css/main.d3e13949.css",
-    "main.js": "/Loop-Machine-Moveo/static/js/main.1a448f22.js",
+    "main.js": "/Loop-Machine-Moveo/static/js/main.49665e20.js",
     "static/js/787.d1179d19.chunk.js": "/Loop-Machine-Moveo/static/js/787.d1179d19.chunk.js",
     "index.html": "/Loop-Machine-Moveo/index.html",
     "main.d3e13949.css.map": "/Loop-Machine-Moveo/static/css/main.d3e13949.css.map",
-    "main.1a448f22.js.map": "/Loop-Machine-Moveo/static/js/main.1a448f22.js.map",
+    "main.49665e20.js.map": "/Loop-Machine-Moveo/static/js/main.49665e20.js.map",
     "787.d1179d19.chunk.js.map": "/Loop-Machine-Moveo/static/js/787.d1179d19.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d3e13949.css",
-    "static/js/main.1a448f22.js"
+    "static/js/main.49665e20.js"
   ]
 }
